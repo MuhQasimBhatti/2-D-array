@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int r, c;
+	cout << "Enter no. of rows and coloumns" << endl;
+	cin >> r >> c;
+
+	int** A = new int* [r];
+
+	for (int i = 0; i < r; i++)
+		A[i] = new int[c];
+
+	cout << "Enter elements"<<endl;
+	for (int i = 0; i < r; i++)
+		for (int j = 0; j < c; j++)
+			cin >> A[i][j];
+
+
+	cout << "MAtrix A is" << endl;
+	for (int i = 0; i < r; i++)
+	{		for (int j = 0; j < c; j++)
+			cout << A[i][j] << " ";
+	cout << endl;
+	}
+}
