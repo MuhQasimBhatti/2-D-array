@@ -1,0 +1,52 @@
+#include < iostream>
+using namespace std;
+int main() {
+	//for 2x2 matrix
+
+	int b[2][2], Det;
+
+	cout << "Enter matrix" << endl;
+	for (int i = 0; i < 2; i++)
+		for (int j = 0; j < 2; j++)
+			cin >> b[i][j];
+	cout << endl;
+	cout << "Matrix A is" << endl;
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 2; j++)
+			cout << b[i][j] << " ";
+		cout << endl;
+	}
+
+	for (int i = 0; i < 2; i++)
+		for (int j = 0; j < 2; j++)
+			Det = (b[0][0] * b[1][1]) - (b[0][1] * b[1][0]);
+
+	cout << "determinant = " << Det << endl;
+	cout << endl << endl << endl;
+
+	//for 3x3 order matrix
+
+	int a[3][3], q, w, e, det;
+
+	cout << "Enter the matrix a" << endl;
+	for (int i = 0; i < 3; i++)
+		for (int j = 0; j < 3; j++)
+			cin >> a[i][j];
+
+	cout << "The matrix is" << endl;
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+			cout << a[i][j] << " ";
+		cout << endl;
+	}
+
+	q = (a[1][1] * a[2][2]) - (a[1][2] * a[2][1]);
+	w = (a[1][0] * a[2][2]) - (a[1][2] * a[2][0]);
+	e = (a[1][0] * a[2][1]) - (a[1][1] * a[2][0]);
+
+	det = (q * a[0][0]) - (w * a[0][1]) + (e * a[0][2]);
+
+	cout << "Determinant= " << det;
+}
